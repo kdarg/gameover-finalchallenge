@@ -1,12 +1,13 @@
 import axios from 'axios';
 import Swal from "sweetalert2";
+import { BACKEND_URL } from "../../constants"
 
 const gamesActions = {
     
     fetchGames: () =>{
        return async(dispatch, getState) => {
 
-		const res = await axios.get('http://localhost:4000/api/games')
+		const res = await axios.get(`${BACKEND_URL}/games`)
 
 		dispatch({type:'fetchGames', payload:res.data.response})
 
@@ -16,7 +17,7 @@ const gamesActions = {
     fetchGame: (id) =>{
         return async(dispatch, getState) => {
  
-         const res = await axios.get('http://localhost:4000/api/games/' + id)
+         const res = await axios.get(`${BACKEND_URL}/games/` + id)
 
          dispatch({type:'fetchOne', payload:res.data.response})
  
@@ -27,7 +28,7 @@ const gamesActions = {
 
         return async(dispatch, getState) => {
 
-                const res = await axios.delete('http://localhost:4000/api/games/' + id)
+                const res = await axios.delete(`${BACKEND_URL}/games/` + id)
         }
     },
 
@@ -41,7 +42,7 @@ const gamesActions = {
     setGame: (gameName, genre, src, size, workson, company, description, requirements, price, images)=>{
         return async(dispatch, getState)=>{
 
-		const res = await axios.post('http://localhost:4000/api/games',{gameName, genre, src, size, workson, company, description, requirements, price, images})
+		const res = await axios.post(`${BACKEND_URL}/games`,{gameName, genre, src, size, workson, company, description, requirements, price, images})
 
         }
     },
@@ -49,7 +50,7 @@ const gamesActions = {
     modifyGame: (game) => {
 	return async(dispatch, getState) => {
 
-		const res = await axios.put('http://localhost:4000/api/games', {game})
+		const res = await axios.put(`${BACKEND_URL}/games`, {game})
 
 	    }
     },
@@ -68,7 +69,7 @@ const gamesActions = {
             try{
                 const res = await axios({
                     method: "post",
-                    url: "http://localhost:4000/api/games/upload",
+                    url: `${BACKEND_URL}/games/upload`,
                     data: newGame,
                     headers: { "Content-Type": "multipart/form-data" , "Authorization": `Bearer ${token}`},
                 }) 
