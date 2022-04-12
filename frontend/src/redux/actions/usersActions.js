@@ -7,7 +7,7 @@ const userActions = {
     signUpUser: (userData) => {
 
         return async (dispatch, getState) => {
-            const res = await axios.post(`${BACKEND_URL}/auth/signUp`, { userData })
+            const res = await axios.post(`${BACKEND_URL}/api/auth/signUp`, { userData })
 
         }
     },
@@ -17,7 +17,7 @@ const userActions = {
 
 		    try{
 
-			    const user = await axios.post(`${BACKEND_URL}/auth/logIn`, { userData })
+			    const user = await axios.post(`${BACKEND_URL}/api/auth/logIn`, { userData })
 
 			    
 		    const Toast = Swal.mixin({
@@ -94,7 +94,7 @@ const userActions = {
 
         return async (dispatch, getState) => {
 
-            const user = await axios.get(`${BACKEND_URL}/auth/signInToken`, {
+            const user = await axios.get(`${BACKEND_URL}/api/auth/signInToken`, {
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }

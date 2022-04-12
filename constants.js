@@ -1,1 +1,1 @@
-const BACKEND_URL = "http://localhost:4000/api"
+const BACKEND_URL = "https://game-over-shop.herokuapp.com"
