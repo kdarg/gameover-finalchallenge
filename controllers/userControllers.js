@@ -1,4 +1,4 @@
-// const Constants = require("../constants")
+const Constants = require("../constants")
 const User = require("../models/usersModels.js");
 const bcryptjs = require("bcryptjs");
 const crypto = require("crypto");
@@ -211,8 +211,8 @@ table, td { color: #ffffff; } a { color: #f362c2; text-decoration: underline; } 
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:11px;font-family:verdana,geneva;" align="left">
         
 <div align="center">
-  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:verdana,geneva;"><tr><td style="font-family:verdana,geneva;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"  href="https://game-over-shop.herokuapp.com/api/verify/${uniqueString}" style="height:44px; v-text-anchor:middle; width:136px;" arcsize="32%" strokecolor="#d9f9ff" strokeweight="3px" fillcolor="#00c3f6"><w:anchorlock/><center style="color:#FFFFFF;font-family:verdana,geneva;"><![endif]-->
-    <a href="https://game-over-shop.herokuapp.com/api/verify/${uniqueString}" target="_blank" style="box-sizing: border-box;display: inline-block;font-family:verdana,geneva;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00c3f6; border-radius: 14px;-webkit-border-radius: 14px; -moz-border-radius: 14px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-width: 3px; border-top-style: solid; border-top-color: #d9f9ff; border-left-width: 3px; border-left-style: solid; border-left-color: #d9f9ff; border-right-width: 3px; border-right-style: solid; border-right-color: #d9f9ff; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #d9f9ff;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:verdana,geneva;"><tr><td style="font-family:verdana,geneva;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${Constants.BACKEND_URL}/verify/${uniqueString}" style="height:44px; v-text-anchor:middle; width:136px;" arcsize="32%" strokecolor="#d9f9ff" strokeweight="3px" fillcolor="#00c3f6"><w:anchorlock/><center style="color:#FFFFFF;font-family:verdana,geneva;"><![endif]-->
+    <a href="${Constants.BACKEND_URL}/verify/${uniqueString}" target="_blank" style="box-sizing: border-box;display: inline-block;font-family:verdana,geneva;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00c3f6; border-radius: 14px;-webkit-border-radius: 14px; -moz-border-radius: 14px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-width: 3px; border-top-style: solid; border-top-color: #d9f9ff; border-left-width: 3px; border-left-style: solid; border-left-color: #d9f9ff; border-right-width: 3px; border-right-style: solid; border-right-color: #d9f9ff; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #d9f9ff;">
       <span style="display:block;padding:11px;line-height:120%;"><span style="font-size: 18px; line-height: 21.6px; font-family: 'trebuchet ms', geneva;"><strong><span style="line-height: 21.6px; font-size: 18px;">VERIFY EMAIL</span></strong></span></span>
     </a>
   <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
@@ -396,7 +396,7 @@ const usersController = {
     if (user) {
       user.verifiedEmail = true;
       await user.save();
-      res.redirect("https://game-over-shop.herokuapp.com/");
+      res.redirect("http://localhost:3000/");
     } else {
       res.json({ success: false, response: "Unverified email." });
     }

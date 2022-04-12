@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import { BACKEND_URL } from "../../constants"
+import { BACKEND_URL } from "../../constants"
 const Swal = require("sweetalert2");
 
 const userActions = {
@@ -7,7 +7,7 @@ const userActions = {
     signUpUser: (userData) => {
 
         return async (dispatch, getState) => {
-            const res = await axios.post(`https://game-over-shop.herokuapp.com/api/auth/signUp`, { userData })
+            const res = await axios.post(`${BACKEND_URL}/auth/signUp`, { userData })
 
         }
     },
@@ -17,7 +17,7 @@ const userActions = {
 
 		    try{
 
-			    const user = await axios.post(`https://game-over-shop.herokuapp.com/api/auth/logIn`, { userData })
+			    const user = await axios.post(`${BACKEND_URL}/auth/logIn`, { userData })
 
 			    
 		    const Toast = Swal.mixin({
@@ -94,7 +94,7 @@ const userActions = {
 
         return async (dispatch, getState) => {
 
-            const user = await axios.get(`https://game-over-shop.herokuapp.com/api/auth/signInToken`, {
+            const user = await axios.get(`${BACKEND_URL}/auth/signInToken`, {
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }
