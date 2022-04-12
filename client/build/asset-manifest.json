@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b47f9817.css",
-    "main.js": "/static/js/main.674c75a6.js",
+    "main.js": "/static/js/main.532045d5.js",
     "static/js/512.1f0835e6.chunk.js": "/static/js/512.1f0835e6.chunk.js",
     "static/media/sonic.png": "/static/media/sonic.c1fb2af447029079117d.png",
     "static/media/yoshi.png": "/static/media/yoshi.3e9567f8c230d3f30674.png",
@@ -17,11 +17,11 @@
     "static/media/apexLogo.png": "/static/media/apexLogo.7c4201df0f565b454599.png",
     "index.html": "/index.html",
     "main.b47f9817.css.map": "/static/css/main.b47f9817.css.map",
-    "main.674c75a6.js.map": "/static/js/main.674c75a6.js.map",
+    "main.532045d5.js.map": "/static/js/main.532045d5.js.map",
     "512.1f0835e6.chunk.js.map": "/static/js/512.1f0835e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b47f9817.css",
-    "static/js/main.674c75a6.js"
+    "static/js/main.532045d5.js"
   ]
 }
