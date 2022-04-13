@@ -15,6 +15,19 @@ class Cart extends React.Component {
     this.state = { price: 0 };
   }
 
+  /**
+ * PayPal Sandbox accounts, generated through a real PayPal account at https://developer.paypal.com/developer/accounts/
+ * The Business account will receive all funds earned through mock purcheses, while the Personal one can be used to make mock purchases
+ * You can actually login to these accounts at https://www.sandbox.paypal.com/ and view their purchase/earning histories, etc
+ * 
+ * Business: x
+ * Persinal: x
+ *
+ * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
+ * 
+ * AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT
+*/
+
   componentDidMount() {
     if (this.props.inShopGames) {
       let iterator = 0;
