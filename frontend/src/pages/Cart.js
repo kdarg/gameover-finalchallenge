@@ -7,11 +7,26 @@ import gamesActions from "../redux/actions/gamesActions";
 import PaypalIcon from "../assets/PaypalIcon";
 import Swal from "sweetalert2";
 
+import Basket from '../components/api/basket'
+
 class Cart extends React.Component {
   constructor(props) {
     super(props);
     this.state = { price: 0 };
   }
+
+  /**
+ * PayPal Sandbox accounts, generated through a real PayPal account at https://developer.paypal.com/developer/accounts/
+ * The Business account will receive all funds earned through mock purcheses, while the Personal one can be used to make mock purchases
+ * You can actually login to these accounts at https://www.sandbox.paypal.com/ and view their purchase/earning histories, etc
+ * 
+ * Business: x
+ * Persinal: x
+ *
+ * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
+ * 
+ * ***REMOVED***
+*/
 
   componentDidMount() {
     if (this.props.inShopGames) {
@@ -90,7 +105,6 @@ class Cart extends React.Component {
                               timerProgressBar: true,
                               confirmButtonText: "Yes, delete it!",
                               cancelButtonColor: "#d33",
-
                               didOpen: (toast) => {
                                 Toast.addEventListener(
                                   "mouseenter",
@@ -143,19 +157,9 @@ class Cart extends React.Component {
               </div>
               <div className="payment-method">
                 <div className="CreditCard-container">
-                  <div className="CreditCard">
-                    <CreditCard />
-                  </div>
-                  <p>Debit / CreditCard</p>
-                </div>
-                <div className="CreditCard-container">
-                  <div className="Paypal">
-                    <PaypalIcon />
-                  </div>
-                  <p>Paypal</p>
+                    <Basket price={this.state.price}/>
                 </div>
               </div>
-              <button className="paypal-button-xx"> Save and Continue</button>
             </div>
           </div>
         </div>
