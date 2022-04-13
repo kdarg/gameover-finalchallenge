@@ -44,8 +44,6 @@ class Games extends React.Component {
 
 	render(){
 
-		console.log(this.state)
-
 		if(this.props.games.length >= 1){
 			return (
 				<>
@@ -86,12 +84,12 @@ class Games extends React.Component {
 								<div className="card__header">
 										<a className='cartAnchorContainer'>
 											<div className="containerCartGame">
-												<p className='priceCardGame'>{game.price}$</p>
+												<p className='priceCardGame'>${game.price}</p>
 											</div>
 										</a>
 										<a className='cartAnchorContainer2'>
 											<div className="containerCartGame2">
-												<a className='linkCart' onClick={() => this.props.addToShop(game.games)}>
+												<a className='linkCart' onClick={() => this.props.addToShop(game)}>
 													<span className="iconGameCard">
 														<AddShoppingCartOutlinedIcon />
 													</span>
@@ -178,6 +176,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
 	fetchGames: gamesActions.fetchGames,
 	filterGames: gamesActions.filterGames,
+	addToShop:gamesActions.addToShop
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Games);
