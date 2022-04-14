@@ -132,7 +132,7 @@
 
 .search-container{
 	display:flex;
-	justify-content:space-around;
+	justify-content:center;
 	align-items:center;
 }
 
@@ -145,23 +145,23 @@
 	width:20rem;
 	color: white;
 	height: 2.5rem;
-	border-radius: 7px;
 	outline: none;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 	border-radius: 1em;
-	backdrop-filter: blur(20px);
-	margin: 0.4rem;
+	/* backdrop-filter: blur(20px); */
+	margin: 2rem 0;
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	-ms-border-radius: 1em;
 	-o-border-radius: 1em;
-	background-color: rgba(0, 0, 0, 0.05);
+	background-color: rgba(255, 0, 208, 0.218);
 	font-family: "Quicksand", sans-serif;
 }
 
 .select-container{
 	width:15rem;
+  margin: 3rem 5rem;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -191,7 +191,7 @@
   
 }
 .containerCartGame {
-  background: linear-gradient(0deg, rgb(198, 54, 226) 0%, rgb(224, 139, 241) 100%);
+  background: linear-gradient(0deg, rgb(16, 99, 0) 0%, rgb(0, 203, 17) 100%);
   box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 5px 38px 0px rgba(0,0,0,0.75);
@@ -199,7 +199,7 @@
   height:40px;
   border-radius: 5px;
   position: absolute;
-  transition: all 0.5s 0s ease;
+  transition: all 5s 5s ease;
 }
 .containerCartGame2 {
   background: linear-gradient(135deg, rgba(255,87,185,1) 0%, rgba(167,4,253,1) 100%);
@@ -257,3 +257,62 @@
 .containerCartGame .priceCardGame {
   display: flex;
 }
+
+@media screen and (max-width: 786px) {
+  .search-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .search-container select{
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* <select> styles */
+select {
+  /* Reset */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, -webkit-gradient(linear, right top, left top, color-stop(3em, rgba(255, 255, 255, 0.3)), color-stop(3em, rgba(255, 255, 255, 0.2)));
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* <option> colors */
+  /* Remove focus outline */
+  /* Remove IE arrow */
+  transition: .5s;
+}
+
+select option {
+  color: inherit;
+  background-color: #620049a4;
+
+}
+select:hover {
+  background-color: #55003f;
+}
+
+select:focus {
+  outline: none;
+  transition: 0.5s;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+

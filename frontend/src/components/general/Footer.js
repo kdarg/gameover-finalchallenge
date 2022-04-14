@@ -21,9 +21,9 @@ export default function Footer() {
       <section className='height-container-footer'>
         <div className='container text-center text-md-start mt-5'>
           <div className='probar mt-3'>
+            <div className='pages-contact'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-2 random'>
-
-              <img src={process.env.PUBLIC_URL + "/assets/footerImages/logofinal.png"} alt="img" className="logofooter" />
+              <img src={process.env.PUBLIC_URL+"/assets/footerImages/logofinal.png"} alt="img"  className="logofooter" />
             </div>
 
             <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
@@ -43,7 +43,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
+            <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 alignContentTitle'>
               <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Contact</h6>
               <p className='font-footer-x'> New York, NY 10012, US </p>
               <p className='font-footer-x'> ***REMOVED*** </p>
@@ -58,6 +58,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
       </section>
       {/* <section className='flex-lg-row  d-flex justify-content-cent p-2'>
         <div className='me-5 d-lg-block'>
