@@ -5,8 +5,11 @@ footer{
   height: 1.8rem;
   width: 1.8rem;
 }
+.iconsocial{
+  text-align: initial;
+}
 .iconsocial svg{
- margin:auto .1rem;
+ margin:auto .3rem;
  text-decoration: none!important;
 }
 .iconsocials a{
@@ -67,7 +70,7 @@ a{
 }
 
 .height-container-footer{
-  min-height: 18rem;
+  min-height: 17rem;
 }
 
 
@@ -118,6 +121,8 @@ a{
     flex-direction: row;
   }
   .iconsocial {
+    text-align: center;
+
     width: 100%;
   }
   p {
@@ -126,6 +131,8 @@ a{
   }
   h6 {
     font-size: 1.2rem !important;
+    justify-content: center!important;
+
   }
   a {
     font-size: 0.9rem;
@@ -142,6 +149,7 @@ a{
     flex-wrap: wrap;
   }
   .iconsocial {
+    text-align: center;
     width: 50%;
   }
   p {
@@ -150,14 +158,12 @@ a{
   }
   h6 {
     font-size: 1.2rem !important;
+    justify-content: center!important;
   }
   a {
     font-size: 0.9rem;
   }
-  /* .font-footer-x p {
-    text-align:start;
-    margin-left:1rem;
-  } */
+  
   .alignItemsFooter {
     display: flex;
     flex-direction: column;
@@ -176,10 +182,7 @@ a{
   .font-footer-x p {
     text-align: center;
   }
-  .pad-links {
-  }
-  
-  .alignContentTitle{
+   .alignContentTitle{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -196,5 +199,8 @@ a{
   .contactFooter {
     display: flex;
     flex-direction: column;
+  }
+  .pages-contact h6{
+    text-align: center;
   }
 }

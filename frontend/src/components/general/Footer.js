@@ -56,7 +56,7 @@ export default function Footer() {
                  <a href="https://www.instagram.com/accounts/login/?hl=es&sour..." target='blank'style={{color:"white"}}> <InstagramIcon/></a>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
       </section>
