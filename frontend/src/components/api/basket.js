@@ -56,7 +56,7 @@ const Basket = (props) => {
             <PayPalScriptProvider
               options={{
                 "client-id":
-                  "AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT",
+                  "***REMOVED***",
                 currency: "USD",
               }}
             >

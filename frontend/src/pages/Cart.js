@@ -25,7 +25,7 @@ class Cart extends React.Component {
    *
    * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
    *
-   * AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT
+   * ***REMOVED***
    */
 
   componentDidMount() {
