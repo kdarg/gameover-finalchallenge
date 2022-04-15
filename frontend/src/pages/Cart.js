@@ -25,7 +25,7 @@ class Cart extends React.Component {
    *
    * PayPal client-id, generated through a real PayPal account at https://developer.paypal.com/developer/applications
    *
-   * ***REMOVED***
+   * AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT
    */
 
   componentDidMount() {
@@ -62,10 +62,9 @@ class Cart extends React.Component {
             {/* el contenedor que tiene w50% */}
             <div className="articles-container-first">
               {/* contenedor que tiene w80% */}
-              <h3 className="summary-order">Summary Order</h3>
+              <h3 className="summary-order">Order Summary</h3>
               <p className="summary-order-p">
-                Check your item and select your shipping for better experience
-                order item.
+                Review your item(s) and checkout with PayPal for a better experience.
               </p>
                 {/* el container grisasio que lleva los juegos con sus precios */}
                 {this.props.inShopGames.length > 0 ? (

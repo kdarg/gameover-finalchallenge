@@ -46,7 +46,7 @@ export default function Footer() {
             <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 alignContentTitle'>
               <h6 className='text-uppercase fw-bold mb-4 font-footer-x'>Contact</h6>
               <p className='font-footer-x'> New York, NY 10012, US </p>
-              <p className='font-footer-x'> ***REMOVED*** </p>
+              <p className='font-footer-x'> gameover.mindhub@gmail.com </p>
               <p className='font-footer-x'> + 01 234 567 88 </p>
               <p className='font-footer-x'> + 01 234 567 89 </p>
               <div className='iconsocial'>
@@ -56,7 +56,7 @@ export default function Footer() {
                  <a href="https://www.instagram.com/accounts/login/?hl=es&sour..." target='blank'style={{color:"white"}}> <InstagramIcon/></a>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
       </section>

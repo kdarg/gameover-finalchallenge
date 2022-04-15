@@ -108,10 +108,13 @@
   width: 10rem;
   position: relative;
   top: -2rem;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .swiper-button-prev,
 .swiper-button-next {
    display: none; 
+}
+.trending-title{
+  width: 50% !important;
 }
 

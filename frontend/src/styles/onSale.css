@@ -197,7 +197,6 @@
         width: 18rem;
         margin-bottom: 10%;
         margin-left: 18%;
-        height: 27rem !important;
     }
     .cardName h1{
         font-size: 1rem;
@@ -309,7 +308,7 @@
     .onSaleCard{
         margin-bottom: 2%;
         margin-left: 0%;
-        /* height: 28rem !important; */
+        height: 55vh !important;
     }
     .cardName h1{
         font-size: 1.3rem;

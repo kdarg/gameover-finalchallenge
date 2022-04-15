@@ -13,12 +13,12 @@ const sendEmail = async (email, uniqueString) => {
     port: 465,
     secure: true,
     auth: {
-      user: "***REMOVED***",
-      pass: "***REMOVED***",
+      user: "gameover.mindhub@gmail.com",
+      pass: "Gameover026",
     },
   });
 
-  let sender = "***REMOVED***";
+  let sender = "gameover.mindhub@gmail.com";
   let mailOptions = {
     from: sender,
     to: email,

@@ -56,7 +56,7 @@ const Basket = (props) => {
             <PayPalScriptProvider
               options={{
                 "client-id":
-                  "***REMOVED***",
+                  "AVwC9go19k3v-1HU5T8wUDa-qS6TmP6_nH7RAesdYWv4_KURqO9gD7j9vX7Bp-BzLdSZnYhd8Qv-tOZT",
                 currency: "USD",
               }}
             >
@@ -91,7 +91,7 @@ const Basket = (props) => {
           )
         ) : (
           <div className="basketText">
-            <div>Log in to checkout with PayPal ! </div>
+            <div>Log in to checkout with PayPal! </div>
             <Link to="/user" className="text-reset">
               <button className="backToGameBasketButton">
                 Login{" "}
