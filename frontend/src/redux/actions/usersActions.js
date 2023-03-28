@@ -30,24 +30,13 @@ const userActions = {
           localStorage.setItem("token", res.data.response.token);
 
           dispatch({ type: "user", payload: res.data.response.userData });
-
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "center-end",
-            showConfirmButton: false,
-            timer: 3000,
-            background: "#FFF",
-            iconColor: "rgb(86, 216, 151)",
-            confirmButtonColor: "rgb(221, 46, 113)",
-            timerProgressBar: true,
-
-            didOpen: (toast) => {
-              toast.addEventListener("mouseenter", Swal.stopTimer);
-              toast.addEventListener("mouseleave", Swal.resumeTimer);
-            },
-          });
           Toast.fire({
             icon: "success",
+            title: `${res.data.message}`,
+          });
+        } else {
+          Toast.fire({
+            icon: "error",
             title: `${res.data.message}`,
           });
         }
