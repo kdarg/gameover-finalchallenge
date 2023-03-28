@@ -4,7 +4,6 @@ const Swal = require("sweetalert2");
 
 const userActions = {
   signUpUser: (userData) => {
-    console.log(userData)
     return async (dispatch, getState) => {
       try {
         const res = await axios.post(`${BACKEND_URL}/api/auth/signUp`, {
@@ -26,7 +25,12 @@ const userActions = {
           },
         });
 
-        if (res.data.success) {
+        if (res.data.success && userData.from === "google") {
+          Toast.fire({
+            icon: "success",
+            title: `${res.data.message}`,
+          });
+        } else if (res.data.success) {
           localStorage.setItem("token", res.data.response.token);
 
           dispatch({ type: "user", payload: res.data.response.userData });
