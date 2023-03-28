@@ -55,8 +55,7 @@ const Basket = (props) => {
           props.price ? (
             <PayPalScriptProvider
               options={{
-                "client-id":
-                  "***REMOVED***",
+                "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID,
                 currency: "USD",
               }}
             >
