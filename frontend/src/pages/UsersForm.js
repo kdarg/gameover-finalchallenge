@@ -45,17 +45,16 @@ const UsersForm = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const userData = {
-      firstname: event.target[1].value,
-      lastname: event.target[2].value,
-      country: event.target[3].value,
+      firstname: event.target[0].value,
+      lastname: event.target[1].value,
+      country: event.target[2].value,
       urlimage: 'mock_user_image',
-      email: event.target[6].value,
-      password: event.target[7].value,
+      email: event.target[5].value,
+      password: event.target[6].value,
       from: "form-Signup",
     };
-    props.signUpUser(userData);
     if (
-      [lastname, firstname, email, password, urlimage, country].includes("")
+      [lastname, firstname, email, password, avatarFile, country].includes("")
     ) {
       const Toast = Swal.mixin({
         toast: true,
@@ -78,12 +77,14 @@ const UsersForm = (props) => {
         title: `You must fill all the fields!`,
       });
     } else {
-      const logedUser = {
-        email: event.target[1].value,
-        password: event.target[2].value,
-        from: "form-Login",
-      };
-      props.signInUser(logedUser);
+      props.signUpUser(userData).then(() => {
+        const logedUser = {
+          email: event.target[5].value,
+          password: event.target[6].value,
+          from: "form-Login",
+        };
+        props.signInUser(logedUser);
+      })
     }
   };
 
