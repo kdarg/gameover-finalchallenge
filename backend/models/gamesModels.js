@@ -18,4 +18,6 @@ const gamesSchema = new mongoose.Schema({
 	images:{type:Array, required:true}
 })
 
+const Games = mongoose.model('games', gamesSchema)
+
 module.exports = Games

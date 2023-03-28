@@ -1,10 +1,4 @@
-const database = "Gameover"
-
-use(database);
-
-db.games.drop();
-
-db.games.insertMany([
+const GAMES_MIGRATION_DATA = [
     {
         "gameName":"Assasin's Creed",
         "genre":['Action','Adventure','Historical'],
@@ -264,7 +258,7 @@ db.games.insertMany([
     {
         "gameName":'Against the Storm',
         "genre":['Strategy','Building','Fantasy'],
-        "src":'"against_the_storm.png',
+        "src":'against_the_storm.png',
         "size":4,
         "workson":'Windows (7, 8, 10, 11)',
         "company":'Eremite Games',
@@ -345,21 +339,7 @@ db.games.insertMany([
             ],
         "price":39.99,
         "images": ["gow_imgone.png", "gow_imgtwo.png" , "gow_imgthree.png", "gow_imgfour.png"],
-    },{
-        "gameName":'test',
-        "genre":['test'],
-        "src":'test',
-        "size":0,
-        "workson":'test',
-        "company":'test',
-        "description":'test',
-        "requirements":[
-            {'processor':'test'},
-            {'memory':0},
-            {'graphics':'test'},
-            {'storage':0},
-            ],
-        "price":0,
-        "images": ["test.png"],
-    },
-])
+    }
+]
+
+module.exports = GAMES_MIGRATION_DATA
