@@ -19,7 +19,6 @@ const gamesSchema = new mongoose.Schema({
 })
 
 const Games = mongoose.model('games', gamesSchema)
-Games.remove();
 Games.insertMany([
 	{
         "gameName":"Assasin's Creed",
