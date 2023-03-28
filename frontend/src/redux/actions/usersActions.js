@@ -32,6 +32,7 @@ const userActions = {
           title: `${res.data.message}`,
         });
         if (res.data.success) {
+          console.log(res.data)
           localStorage.setItem("token", res.data.response.token);
 
           dispatch({ type: "user", payload: res.data.response.userData });

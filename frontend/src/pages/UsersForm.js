@@ -128,23 +128,6 @@ const UsersForm = (props) => {
     }
   };
 
-  //FUNCTION CARD FORM
-  setTimeout(() => {
-    document.getElementById("flip-card-btn-turn-to-back").style.visibility =
-    "visible";
-  document.getElementById("flip-card-btn-turn-to-front").style.visibility =
-    "visible";
-  document.getElementById("flip-card-btn-turn-to-back").onclick =
-    function () {
-      document.getElementById("flip-card").classList.toggle("do-flip");
-    };
-
-  document.getElementById("flip-card-btn-turn-to-front").onclick =
-    function () {
-      document.getElementById("flip-card").classList.toggle("do-flip");
-    };
-  },200);
-
   //Function Scroll
   async function setSignIn(event) {
     const container = document.getElementById("containerUsersForm");

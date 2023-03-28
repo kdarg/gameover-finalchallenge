@@ -20,6 +20,7 @@ import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
 import { css } from "@emotion/react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ProgressBar from "react-scroll-progress-bar"
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
 
@@ -44,41 +45,40 @@ function App(props) {
 	}, []);
 
 	return (
-		<div className="App">
-			{loading ? (
-				<div className="loadingContainer">
-					<div className="loadingImg">
-						<PacmanLoader className="pacman" size={100} color={"#FFFFFF"} loading={true} />
+		<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+			<div className="App">
+				{loading ? (
+					<div className="loadingContainer">
+						<div className="loadingImg">
+							<PacmanLoader className="pacman" size={100} color={"#FFFFFF"} loading={true} />
+						</div>
 					</div>
-				</div>
-				) : (
-					<BrowserRouter>
-						<ProgressBar />
-						<NavBar/>
+					) : (
+						<BrowserRouter>
+							<ProgressBar />
+							<NavBar/>
 
-						<Routes>
-							<Route path='/' element={<Home/>}/>
-							<Route path='/home' element={<Home/>}/>
-							<Route path='/aboutus' element={<AboutUs/>}/>
-							<Route path='/games' element={<Games/>}/>
-							<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
-							<Route path='*' element={ <Error/> }/>
-							<Route path='/cart' element={ <Cart/> }/>
-							<Route path='/modifyGame/:id' element={<ModifyGameElement/>}/>
-							<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
-							{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
-						</Routes>
-						<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 50 }}/>}/>
+							<Routes>
+								<Route path='/' element={<Home/>}/>
+								<Route path='/home' element={<Home/>}/>
+								<Route path='/aboutus' element={<AboutUs/>}/>
+								<Route path='/games' element={<Games/>}/>
+								<Route path='/gamesdetails/:id' element={<GamesDetails/>}/>
+								<Route path='*' element={ <Error/> }/>
+								<Route path='/cart' element={ <Cart/> }/>
+								<Route path='/modifyGame/:id' element={<ModifyGameElement/>}/>
+								<Route path="/user" element={ localStorage.getItem('token') ? (<Navigate replace to="/" />) : <UsersForm/>}/>
+								{props.user && props.user.isAdmin && <Route path='/admin' element={<Admin/>}/>}
+							</Routes>
+							<ScrollToTop smooth component={<ArrowCircleUpSharpIcon  sx={{ fontSize: 50 }}/>}/>
 
-						<Footer/>
+							<Footer/>
 
-					</BrowserRouter>
-				)
-			}
-
-
-
-		</div>
+						</BrowserRouter>
+					)
+				}
+			</div>
+		</GoogleOAuthProvider>
 	);
 }
 
