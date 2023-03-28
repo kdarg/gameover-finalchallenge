@@ -6,7 +6,9 @@ mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true,
 
 })
-.then(()=>console.log('Database connected'))
+.then(()=> {
+    console.log('Database connected')
+    mongoose.connection.collection('games').drop()
+    console.log('Games collection dropped')
+})
 .catch(err=>console.error(err))
-
-mongoose.connection.collection('Games').drop()
