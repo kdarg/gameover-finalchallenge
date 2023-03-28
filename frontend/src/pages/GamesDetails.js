@@ -22,9 +22,6 @@ const GamesDetails = (props) => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(game);
-
-
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
@@ -38,7 +35,6 @@ const GamesDetails = (props) => {
 
   function addToShop(event) {
     props.addToShop(game.games);
-    console.log("se añadio al carrito");
     const Toast = Swal.mixin({
       toast: true,
       position: "center-end",

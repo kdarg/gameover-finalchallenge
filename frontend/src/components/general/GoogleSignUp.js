@@ -10,7 +10,6 @@ function GoogleLogUp(props) {
     onSuccess: tokenResponse => {
       axios.get('https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses,photos', {headers: {Authorization: `Bearer ${tokenResponse.access_token}`}})
         .then(userInfoResponse => {
-          console.log(userInfoResponse)
           const userData = {
             firstname: userInfoResponse.data.names[0].givenName,
             lastname: userInfoResponse.data.names[0].familyName,
@@ -23,8 +22,7 @@ function GoogleLogUp(props) {
         
           props.signUpUser(userData)
         })
-    },
-    onError: error => console.log(error)
+    }
   });
 
   return (

@@ -57,9 +57,7 @@ const gamesActions = {
                     url: `${BACKEND_URL}/api/games/modify`,
                     data: game,
                     headers: { "Content-Type": "multipart/form-data" , "Authorization": `Bearer ${token}`},
-                }) 
-
-		console.log(res)
+                })
                 
                 if (res.data.success){
                     const Toast = Swal.mixin({
@@ -110,8 +108,6 @@ const gamesActions = {
     
 
             }catch(err){
-                console.log(err)
-
                 const Toast = Swal.mixin({
                     toast: true,
                     position: "center-end",
@@ -211,8 +207,6 @@ const gamesActions = {
     
 
             }catch(err){
-                console.log(err)
-
                 const Toast = Swal.mixin({
                     toast: true,
                     position: "center-end",

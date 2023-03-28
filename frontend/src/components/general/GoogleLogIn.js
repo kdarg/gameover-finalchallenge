@@ -5,17 +5,6 @@ import { useGoogleLogin } from '@react-oauth/google';
 import axios from "axios";
 
 function GoogleLogIn(props) {
-  const responseGoogle = async (res) => {
-    if(res) {
-      const logedUser = {
-        email: res.email,
-        password: res.id,
-        from: "google",
-      };
-      await props.signInUser(logedUser);
-    }
-  };
-
   const googleLogin = useGoogleLogin({
     onSuccess: tokenResponse => {
       axios.get('https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses,photos', {headers: {Authorization: `Bearer ${tokenResponse.access_token}`}})
@@ -28,8 +17,7 @@ function GoogleLogIn(props) {
 
           props.signInUser(userData)
         })
-    },
-    onError: error => console.log(error)
+    }
   });
 
   return (
@@ -40,19 +28,6 @@ function GoogleLogIn(props) {
         </a>
       </div>
     </div>
-    // <LoginSocialGoogle
-    //   client_id={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-    //   onResolve={({ provider, data }) => {
-    //     console.log(data);
-    //     responseGoogle(data);
-    //   }}
-    // >
-    //   <div class="social-container">
-    //     <a className="a-usersForm" href="#" class="social a-usersForm">
-    //       <i class="fab fa-google-plus-g"></i>
-    //     </a>
-    //   </div>
-    // </LoginSocialGoogle>
   );
 }
 

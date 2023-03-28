@@ -30,7 +30,6 @@ const UsersForm = (props) => {
     axios
       .get("https://restcountries.com/v2/all?fields=name")
       .then((res) => setCountries(res.data))
-      .catch((error) => console.log(error));
   }, []);
 
   const [lastname, setLastname] = useState("");
@@ -44,7 +43,6 @@ const UsersForm = (props) => {
   const [hidden, setHidden] = useState(true);
 
   const handleSubmit = (event) => {
-    console.log(event.target[4].files)
     event.preventDefault();
     const userData = {
       firstname: event.target[1].value,
