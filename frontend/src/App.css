@@ -171,21 +171,9 @@ outline: none !important;
   width: 33.333333333333336px!important;
   height: 33.333333333333336px!important;
   background-color: #6f00ff !important;
-  margin: 2px!important;
-  border-radius: 100%!important;
-  -webkit-transform: translate(0, -25px)!important;
-  -moz-transform: translate(0, -25px)!important;
-  -ms-transform: translate(0, -25px)!important;
-  transform: translate(0, -25px);
-  position: absolute!important;
   top: 100px!important;
   left: 500px!important;
-  -webkit-animation: animation-1x9icxu 1s 1.25s infinite linear!important;
-  animation: animation-1x9icxu 1s 1.25s infinite linear!important;
-  -webkit-animation-fill-mode: both!important;
-  animation-fill-mode: both!important;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5)!important;
-
 }
 .css-16unfty{
   width: 33.333333333333336px!important;
